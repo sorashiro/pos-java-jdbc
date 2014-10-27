@@ -55,4 +55,8 @@ public class Item {
     public void setPrice(double price) {
         this.price = price;
     }
+
+    public List<Promotion> getPromotionList() {
+        return promotionList;
+    }
 }
