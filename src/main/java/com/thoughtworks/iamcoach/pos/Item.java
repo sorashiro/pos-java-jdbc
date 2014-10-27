@@ -8,10 +8,11 @@ public class Item {
     private String name;
     private String unit;
     private double price;
-    private List<Promotion> promotionList = new ArrayList<Promotion>();
+    private List<Promotion> promotionList;
 
     public Item() {
     }
+
 
     public Item(String barcode, String name, String unit, double price) {
         this.setBarcode(barcode);
@@ -20,6 +21,9 @@ public class Item {
         this.setPrice(price);
     }
 
+    public void setPromotionList(List<Promotion> promotionList) {
+        this.promotionList = promotionList;
+    }
     public String getBarcode() {
         return barcode;
     }
