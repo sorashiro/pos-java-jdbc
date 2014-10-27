@@ -5,6 +5,7 @@ import java.util.List;
 
 public class PromotionServer {
     private PromotionType promotionType;
+    private StorageServer storageServer = new StorageServer();
 
     public void setPromotionType(String barcode) {
         this.promotionType = PromotionType.newPromotionType(barcode);
@@ -18,6 +19,19 @@ public class PromotionServer {
             printItemList.add(promotionType.calculate(boughtItem));
         }
         return printItemList;
+    }
+
+    public  Promotion getPromotionByBarcode(String barcode) {
+        Promotion result = null;
+        List<Promotion> promotions = storageServer.getPromotions();
+
+        for (Promotion promotion : promotions) {
+            if (barcode.equals(promotion.getBarcode())) {
+                result = promotion;
+            }
+        }
+
+        return result;
     }
 
 }
