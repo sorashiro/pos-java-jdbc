@@ -1,5 +1,7 @@
 package com.thoughtworks.iamcoach.pos;
 
+import java.util.List;
+
 public class BoughtItem {
     private Item item;
     private double number;
@@ -29,4 +31,7 @@ public class BoughtItem {
         return item.getUnit();
     }
 
+    public List<Promotion> getPromotionList() {
+        return item.getPromotionList();
+    }
 }
