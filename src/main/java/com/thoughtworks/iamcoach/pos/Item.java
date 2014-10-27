@@ -1,6 +1,5 @@
 package com.thoughtworks.iamcoach.pos;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Item {
@@ -24,6 +23,7 @@ public class Item {
     public void setPromotionList(List<Promotion> promotionList) {
         this.promotionList = promotionList;
     }
+
     public String getBarcode() {
         return barcode;
     }
