@@ -9,6 +9,10 @@ public class Promotion {
         this.type = type;
     }
 
+    public Promotion(String type) {
+        this.type = type;
+    }
+
     public String getBarcode() {
         return barcode;
     }
