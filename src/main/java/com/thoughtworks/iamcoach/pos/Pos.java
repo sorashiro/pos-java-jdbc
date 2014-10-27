@@ -1,5 +1,6 @@
 package com.thoughtworks.iamcoach.pos;
 
+import com.thoughtworks.iamcoach.pos.service.ItemServer;
 import com.thoughtworks.iamcoach.pos.vo.BoughtItem;
 
 import java.util.ArrayList;

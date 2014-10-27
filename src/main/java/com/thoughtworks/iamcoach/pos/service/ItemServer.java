@@ -1,5 +1,7 @@
-package com.thoughtworks.iamcoach.pos;
+package com.thoughtworks.iamcoach.pos.service;
 
+import com.thoughtworks.iamcoach.pos.PromotionServer;
+import com.thoughtworks.iamcoach.pos.StorageServer;
 import com.thoughtworks.iamcoach.pos.vo.Item;
 import com.thoughtworks.iamcoach.pos.vo.Promotion;
 
