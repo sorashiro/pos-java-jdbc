@@ -21,17 +21,17 @@ public class PromotionServer {
         return printItemList;
     }
 
-    public  Promotion getPromotionByBarcode(String barcode) {
-        Promotion result = null;
+    public  List<Promotion> getPromotionByBarcode(String barcode) {
+        List<Promotion> promotionList = new ArrayList<Promotion>();
         List<Promotion> promotions = storageServer.getPromotions();
 
         for (Promotion promotion : promotions) {
             if (barcode.equals(promotion.getBarcode())) {
-                result = promotion;
+                promotionList.add(promotion);
             }
         }
 
-        return result;
+        return promotionList;
     }
 
 }
