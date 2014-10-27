@@ -7,10 +7,10 @@ import java.util.List;
 
 public class ItemService {
 
-    StorageServer storageServer = new StorageServer();
+    StorageService storageService = new StorageService();
     PromotionService promotionService = new PromotionService();
     public Item findItem(String barcode) {
-        List<Item> items = storageServer.getItems();
+        List<Item> items = storageService.getItems();
 
         Item result = new Item();
         for (Item item : items) {

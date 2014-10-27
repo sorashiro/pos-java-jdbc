@@ -7,7 +7,7 @@ import com.thoughtworks.iamcoach.pos.vo.Promotion;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StorageServer {
+public class StorageService {
     private static final String ITEM_FILE = "src/main/resources/item.txt";
     private static final String CART_FILE = "src/main/resources/cart.txt";
     private static final String DISCOUNT_FILE = "src/main/resources/discount_promotion.txt";

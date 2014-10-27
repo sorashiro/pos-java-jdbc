@@ -10,7 +10,7 @@ import java.util.List;
 
 public class PromotionService {
     private PromotionType promotionType;
-    private StorageServer storageServer = new StorageServer();
+    private StorageService storageService = new StorageService();
 
     public void setPromotionType(String barcode) {
         this.promotionType = PromotionType.newPromotionType(barcode);
@@ -28,7 +28,7 @@ public class PromotionService {
 
     public  List<Promotion> getPromotionByBarcode(String barcode) {
         List<Promotion> promotionList = new ArrayList<Promotion>();
-        List<Promotion> promotions = storageServer.getPromotions();
+        List<Promotion> promotions = storageService.getPromotions();
 
         for (Promotion promotion : promotions) {
             if (barcode.equals(promotion.getBarcode())) {

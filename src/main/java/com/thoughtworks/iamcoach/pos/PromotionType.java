@@ -1,6 +1,6 @@
 package com.thoughtworks.iamcoach.pos;
 
-import com.thoughtworks.iamcoach.pos.service.StorageServer;
+import com.thoughtworks.iamcoach.pos.service.StorageService;
 import com.thoughtworks.iamcoach.pos.vo.BoughtItem;
 import com.thoughtworks.iamcoach.pos.vo.Promotion;
 
@@ -14,11 +14,11 @@ public class PromotionType {
     static final String BUY_TWO_GET_ONE_FREE = "buy_two_get_one_free";
     static final String SECOND_HALF_PRICE = "second_half_price";
     static final String DISCOUNT = "discount";
-    static StorageServer storageServer = new StorageServer();
+    static StorageService storageService = new StorageService();
 
     public static PromotionType newPromotionType(String barcode) {
         PromotionType promotionType = new SecondHalfPricePromotion();
-        List<Promotion> promotions = storageServer.getPromotions();
+        List<Promotion> promotions = storageService.getPromotions();
 
         for (Promotion promotion : promotions) {
             if (barcode.equals(promotion.getBarcode())) {
