@@ -1,5 +1,7 @@
 package com.thoughtworks.iamcoach.pos;
 
+import com.thoughtworks.iamcoach.pos.vo.BoughtItem;
+
 public class BuyTwoGetOneFreePromotion extends PromotionType {
     @Override
     public String getPromotionType() {

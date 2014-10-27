@@ -1,5 +1,6 @@
 package com.thoughtworks.iamcoach.pos;
 
+import com.thoughtworks.iamcoach.pos.vo.BoughtItem;
 import org.junit.Test;
 
 import static org.fest.assertions.api.Assertions.assertThat;

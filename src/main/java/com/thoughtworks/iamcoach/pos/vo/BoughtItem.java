@@ -1,4 +1,7 @@
-package com.thoughtworks.iamcoach.pos;
+package com.thoughtworks.iamcoach.pos.vo;
+
+import com.thoughtworks.iamcoach.pos.Item;
+import com.thoughtworks.iamcoach.pos.Promotion;
 
 import java.util.List;
 
