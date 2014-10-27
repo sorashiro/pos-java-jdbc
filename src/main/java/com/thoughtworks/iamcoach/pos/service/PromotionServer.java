@@ -1,5 +1,8 @@
-package com.thoughtworks.iamcoach.pos;
+package com.thoughtworks.iamcoach.pos.service;
 
+import com.thoughtworks.iamcoach.pos.PrintItem;
+import com.thoughtworks.iamcoach.pos.PromotionType;
+import com.thoughtworks.iamcoach.pos.StorageServer;
 import com.thoughtworks.iamcoach.pos.vo.BoughtItem;
 import com.thoughtworks.iamcoach.pos.vo.Promotion;
 
