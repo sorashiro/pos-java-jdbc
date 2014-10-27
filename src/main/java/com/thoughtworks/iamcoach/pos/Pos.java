@@ -1,6 +1,6 @@
 package com.thoughtworks.iamcoach.pos;
 
-import com.thoughtworks.iamcoach.pos.service.ItemServer;
+import com.thoughtworks.iamcoach.pos.service.ItemService;
 import com.thoughtworks.iamcoach.pos.vo.BoughtItem;
 
 import java.util.ArrayList;
@@ -21,7 +21,7 @@ public class Pos {
     }
 
     private BoughtItem toBoughtItem(String cartBarcode, int times) {
-        ItemServer itemServer = new ItemServer();
+        ItemService itemService = new ItemService();
         String[] barcodes = cartBarcode.split("-");
 
         Double number = 1.00;
@@ -29,7 +29,7 @@ public class Pos {
             number = Double.parseDouble(barcodes[1]);
         }
 
-        return new BoughtItem(itemServer.findItem(barcodes[0]), number * times);
+        return new BoughtItem(itemService.findItem(barcodes[0]), number * times);
     }
 
     private List<String> uniqueArray(List<String> cartBarcodes) {

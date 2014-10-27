@@ -5,7 +5,7 @@ import com.thoughtworks.iamcoach.pos.vo.Promotion;
 
 import java.util.List;
 
-public class ItemServer {
+public class ItemService {
 
     StorageServer storageServer = new StorageServer();
     PromotionServer promotionServer = new PromotionServer();
