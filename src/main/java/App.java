@@ -1,5 +1,5 @@
 import com.thoughtworks.iamcoach.pos.*;
-import com.thoughtworks.iamcoach.pos.service.PromotionServer;
+import com.thoughtworks.iamcoach.pos.service.PromotionService;
 import com.thoughtworks.iamcoach.pos.service.StorageServer;
 import com.thoughtworks.iamcoach.pos.vo.BoughtItem;
 
@@ -14,8 +14,8 @@ public class App {
         Pos pos = new Pos();
         List<BoughtItem> boughtItems = pos.handleBarcodes(cartBarcodes);
 
-        PromotionServer promotionServer = new PromotionServer();
-        List<PrintItem> printItemList = promotionServer.calculatePromotion(boughtItems);
+        PromotionService promotionService = new PromotionService();
+        List<PrintItem> printItemList = promotionService.calculatePromotion(boughtItems);
         Output.printShoppingList(printItemList);
     }
 

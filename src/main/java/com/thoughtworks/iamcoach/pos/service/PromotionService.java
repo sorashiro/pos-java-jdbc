@@ -8,7 +8,7 @@ import com.thoughtworks.iamcoach.pos.vo.Promotion;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PromotionServer {
+public class PromotionService {
     private PromotionType promotionType;
     private StorageServer storageServer = new StorageServer();
 

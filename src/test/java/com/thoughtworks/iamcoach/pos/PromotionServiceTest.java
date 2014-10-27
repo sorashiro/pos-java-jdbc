@@ -1,7 +1,7 @@
 package com.thoughtworks.iamcoach.pos;
 
 
-import com.thoughtworks.iamcoach.pos.service.PromotionServer;
+import com.thoughtworks.iamcoach.pos.service.PromotionService;
 import com.thoughtworks.iamcoach.pos.vo.BoughtItem;
 import com.thoughtworks.iamcoach.pos.vo.Item;
 import org.junit.Test;
@@ -11,8 +11,8 @@ import java.util.List;
 
 import static org.fest.assertions.api.Assertions.assertThat;
 
-public class PromotionServerTest {
-  PromotionServer promotionServer = new PromotionServer();
+public class PromotionServiceTest {
+  PromotionService promotionService = new PromotionService();
 
   @Test
   public void calculate_promotion_test() {
@@ -25,6 +25,6 @@ public class PromotionServerTest {
     boughtItems.add(new BoughtItem(item2, 3.00));
     boughtItems.add(new BoughtItem(item3, 2.00));
 
-    assertThat(promotionServer.calculatePromotion(boughtItems).size()).isEqualTo(3);
+    assertThat(promotionService.calculatePromotion(boughtItems).size()).isEqualTo(3);
   }
 }
