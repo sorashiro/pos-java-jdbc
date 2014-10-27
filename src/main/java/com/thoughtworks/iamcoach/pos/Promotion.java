@@ -1,20 +1,20 @@
 package com.thoughtworks.iamcoach.pos;
 
 public class Promotion {
-  private String barcode;
-  private String type;
+    private String barcode;
+    private String type;
 
-  public Promotion(String barcode, String type) {
-    this.barcode = barcode;
-    this.type = type;
-  }
+    public Promotion(String barcode, String type) {
+        this.barcode = barcode;
+        this.type = type;
+    }
 
-  public String getBarcode() {
-    return barcode;
-  }
+    public String getBarcode() {
+        return barcode;
+    }
 
-  public String getType() {
-    return type;
-  }
+    public String getType() {
+        return type;
+    }
 
 }
