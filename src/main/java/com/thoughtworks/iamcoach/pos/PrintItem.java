@@ -11,7 +11,7 @@ public class PrintItem {
     private double subtotal;
 
     public PrintItem(BoughtItem boughtItem, double subtotal) {
-        this.setSubtotal(subtotal);
+        this.subtotal = subtotal;
         this.name = boughtItem.getName();
         this.unit = boughtItem.getUnit();
         this.price = boughtItem.getPrice();
@@ -21,10 +21,6 @@ public class PrintItem {
 
     public double getSubtotal() {
         return subtotal;
-    }
-
-    public void setSubtotal(double subtotal) {
-        this.subtotal = subtotal;
     }
 
     public String getName() {
