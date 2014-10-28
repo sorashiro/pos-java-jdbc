@@ -1,5 +1,7 @@
 package com.thoughtworks.iamcoach.pos.vo;
 
+import com.thoughtworks.iamcoach.pos.PrintItem;
+
 import java.util.List;
 
 public class BoughtItem {
@@ -34,4 +36,10 @@ public class BoughtItem {
     public List<Promotion> getPromotionList() {
         return item.getPromotionList();
     }
+
+//    public PrintItem calculatePrice(){
+//        PrintItem printItem = null;
+//        List<PrintItem> printItems
+//        return printItem;
+//    }
 }
