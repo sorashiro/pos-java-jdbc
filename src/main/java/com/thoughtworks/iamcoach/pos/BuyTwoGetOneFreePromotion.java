@@ -1,11 +1,20 @@
 package com.thoughtworks.iamcoach.pos;
 
 import com.thoughtworks.iamcoach.pos.vo.BoughtItem;
+import com.thoughtworks.iamcoach.pos.vo.Promotion;
 
-public class BuyTwoGetOneFreePromotion extends PromotionType {
-    @Override
-    public String getPromotionType() {
-        return PromotionType.BUY_TWO_GET_ONE_FREE;
+public class BuyTwoGetOneFreePromotion extends Promotion {
+
+    public BuyTwoGetOneFreePromotion(String barcode, int id, String type, int discount, int level) {
+        super(barcode, id, type, discount, level);
+    }
+
+    public BuyTwoGetOneFreePromotion(String barcode, String type) {
+        super(barcode, type);
+    }
+
+    public BuyTwoGetOneFreePromotion(int id, String type, int level) {
+        super(id, type, level);
     }
 
     public PrintItem calculate(BoughtItem boughtItem) {
