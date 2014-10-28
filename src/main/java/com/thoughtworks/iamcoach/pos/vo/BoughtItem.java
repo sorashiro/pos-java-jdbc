@@ -2,6 +2,7 @@ package com.thoughtworks.iamcoach.pos.vo;
 
 import com.thoughtworks.iamcoach.pos.PrintItem;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class BoughtItem {
@@ -37,9 +38,10 @@ public class BoughtItem {
         return item.getPromotionList();
     }
 
-//    public PrintItem calculatePrice(){
-//        PrintItem printItem = null;
-//        List<PrintItem> printItems
-//        return printItem;
-//    }
+    public PrintItem calculatePrice(){
+        BoughtItem boughtItem = new BoughtItem(item, 4);
+        PrintItem printItem = new PrintItem(boughtItem,40);
+        List<PrintItem> printItems = new ArrayList<PrintItem>();
+        return printItem;
+    }
 }

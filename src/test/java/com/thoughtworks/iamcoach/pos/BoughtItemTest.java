@@ -25,6 +25,6 @@ public class BoughtItemTest {
         promotionList.add(buyTwoGetOneFreePromotion);
         promotionList.add(secondHalfPricePromotion);
         promotionList.add(discountPromotion);
-        assertThat(boughtItem.calculatePrice().getSubtoal()).isEqualTo(40.0);
+        assertThat(boughtItem.calculatePrice().getSubtotal()).isEqualTo(40.0);
     }
 }
