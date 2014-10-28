@@ -33,6 +33,10 @@ public class Promotion {
         return barcode;
     }
 
+    public int getDiscount() {
+        return discount;
+    }
+
     public String getType() {
         return type;
     }
