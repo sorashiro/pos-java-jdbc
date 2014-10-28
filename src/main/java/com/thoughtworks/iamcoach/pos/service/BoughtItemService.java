@@ -17,6 +17,8 @@ public class BoughtItemService {
             PrintItem pi = promotion.calculate(boughtItem);
             printItems.add(pi);
         }
+        //TODO 对printItems进行排序
+        
         return printItem;
     }
 }
