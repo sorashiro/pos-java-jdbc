@@ -1,10 +1,13 @@
 package com.thoughtworks.iamcoach.pos.vo;
 
 public class Promotion {
+    //TODO should be delete
     private String barcode;
     private int id;
     private String type;
+    private int discount;
     private int level;
+    //TODO should be delete
 
     public Promotion(String barcode, String type) {
         this.barcode = barcode;
@@ -17,10 +20,15 @@ public class Promotion {
         this.level = level;
     }
 
-    public Promotion(String type) {
+    public Promotion(String barcode, int id, String type, int discount, int level) {
+        this.barcode = barcode;
+        this.id = id;
         this.type = type;
+        this.discount = discount;
+        this.level = level;
     }
 
+    //TODO should be delete
     public String getBarcode() {
         return barcode;
     }
