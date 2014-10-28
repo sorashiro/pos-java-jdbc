@@ -1,5 +1,7 @@
 package com.thoughtworks.iamcoach.pos.vo;
 
+import com.thoughtworks.iamcoach.pos.PrintItem;
+
 public class Promotion {
     //TODO should be delete
     private String barcode;
@@ -40,4 +42,8 @@ public class Promotion {
         return type;
     }
 
+    public PrintItem calculate(BoughtItem boughtItem) {
+        Double subtotal = boughtItem.getPrice() * boughtItem.getNumber();
+        return new PrintItem(boughtItem, subtotal);
+    }
 }

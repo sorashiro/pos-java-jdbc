@@ -38,8 +38,5 @@ public class BoughtItem {
         return item.getPromotionList();
     }
 
-    public PrintItem calculate(BoughtItem boughtItem) {
-        Double subtotal = boughtItem.getPrice() * boughtItem.getNumber();
-        return new PrintItem(boughtItem, subtotal);
-    }
+
 }
