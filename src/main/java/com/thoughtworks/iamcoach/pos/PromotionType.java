@@ -26,35 +26,8 @@ public class PromotionType {
         } else if (type.equals(DISCOUNT)) {
             promotion = new DiscountPromotion(id, type, discount, level);
         }
-    }
-    public static PromotionType newPromotionType(String barcode) {
-        PromotionType promotionType = new SecondHalfPricePromotion();
-        List<Promotion> promotions = storageService.getPromotions();
 
-        for (Promotion promotion : promotions) {
-            if (barcode.equals(promotion.getBarcode())) {
-
-                String type = promotion.getType();
-                promotionType = newPromotionByType(type);
-            }
-        }
-
-        return promotionType;
-    }
-
-    private static PromotionType newPromotionByType(String type) {
-        PromotionType promotionType = new PromotionType();
-        String[] typeArray = type.split(":");
-
-        if (typeArray[0].equals(BUY_TWO_GET_ONE_FREE)) {
-            promotionType = new BuyTwoGetOneFreePromotion();
-        } else if (typeArray[0].equals(SECOND_HALF_PRICE)) {
-            promotionType = new SecondHalfPricePromotion();
-        } else if (typeArray[0].equals(DISCOUNT)) {
-            promotionType = new DiscountPromotion(type);
-        }
-
-        return promotionType;
+        return promotion;
     }
 
     public PrintItem calculate(BoughtItem boughtItem) {
