@@ -10,11 +10,6 @@ public class StorageServiceTest {
   StorageService storageService = new StorageService();
 
   @Test
-  public void get_items_test() {
-    assertThat(storageService.getItems().size()).isEqualTo(9);
-  }
-
-  @Test
   public void get_cart_barcodes_test() {
     assertThat(storageService.getCartBarcodes().size()).isEqualTo(9);
   }

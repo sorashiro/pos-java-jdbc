@@ -8,24 +8,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StorageService {
-    private static final String ITEM_FILE = "src/main/resources/item.txt";
     private static final String CART_FILE = "src/main/resources/cart.txt";
     private static final String DISCOUNT_FILE = "src/main/resources/discount_promotion.txt";
     private static final String BUY_TWO_GET_ONE_FREE_FILE = "src/main/resources/buy_two_get_one_free_promotion.txt";
     private static final String SECOND_HALF_PRICE_PROMOTION_FILE = "src/main/resources/second_half_price_promotion.txt";
-
-    public List<Item> getItems() {
-        List<Item> arrayList = new ArrayList<Item>();
-
-        List<String> linesRead = FileUtil.textToList(ITEM_FILE);
-
-        for (String line : linesRead) {
-            String[] stringItem = line.split(" ");
-            Item item = new Item(stringItem[0], stringItem[1], stringItem[2], Double.parseDouble(stringItem[3]));
-            arrayList.add(item);
-        }
-        return arrayList;
-    }
 
     public List<String> getCartBarcodes() {
         return FileUtil.textToList(CART_FILE);
