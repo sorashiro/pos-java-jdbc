@@ -37,4 +37,9 @@ public class ItemService {
         return itemDao.getItems();
     }
 
+    public Item findItemByBarcode(String barcode) {
+
+        return itemDao.getItemByBarcode(barcode);
+    }
+
 }

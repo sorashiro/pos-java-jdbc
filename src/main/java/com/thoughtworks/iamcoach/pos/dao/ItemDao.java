@@ -69,5 +69,23 @@ public class ItemDao {
         return promotionList;
     }
 
+    public Item getItemByBarcode(String barcode) {
+        Item item = null;
+        String sql = "SELECT * FROM item WHERE barcode=?";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, barcode);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            resultSet.next();
+            item = new Item(resultSet.getInt("id"), resultSet.getString("barcode"),
+                    resultSet.getString("name"), resultSet.getString("unit"),
+                    resultSet.getDouble("price"), resultSet.getString("category"));
+            preparedStatement.close();
+            resultSet.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return item;
+    }
 
 }
