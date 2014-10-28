@@ -22,5 +22,10 @@ public class ItemServiceTest {
         int id = 1;
         assertThat(itemService.findItemById(id).getBarcode()).isEqualTo("ITEM000001");
     }
+
+    @Test
+    public void find_items_test() {
+        assertThat(itemService.findItems().size()).isEqualTo(9);
+    }
 }
 
