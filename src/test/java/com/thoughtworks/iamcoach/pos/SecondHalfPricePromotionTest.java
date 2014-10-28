@@ -8,7 +8,7 @@ import static org.fest.assertions.api.Assertions.assertThat;
 
 public class SecondHalfPricePromotionTest {
 
-  SecondHalfPricePromotion secondHalfPricePromotion = new SecondHalfPricePromotion();
+  SecondHalfPricePromotion secondHalfPricePromotion = new SecondHalfPricePromotion(2, "second_half_price", 2);
 
   @Test
   public void calculate_test() {
