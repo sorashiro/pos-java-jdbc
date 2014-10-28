@@ -5,8 +5,8 @@ import com.thoughtworks.iamcoach.pos.vo.Promotion;
 
 public class BuyTwoGetOneFreePromotion extends Promotion {
 
-    public BuyTwoGetOneFreePromotion(String barcode, int id, String type, int discount, int level) {
-        super(barcode, id, type, discount, level);
+    public BuyTwoGetOneFreePromotion(int id, String type, int discount, int level) {
+        super(id, type, discount, level);
     }
 
     public BuyTwoGetOneFreePromotion(String barcode, String type) {

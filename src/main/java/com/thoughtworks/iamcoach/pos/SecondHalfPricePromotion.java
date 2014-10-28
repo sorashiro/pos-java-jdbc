@@ -6,8 +6,8 @@ import com.thoughtworks.iamcoach.pos.vo.Promotion;
 public class SecondHalfPricePromotion extends Promotion {
 
 
-    public SecondHalfPricePromotion(String barcode, int id, String type, int discount, int level) {
-        super(barcode, id, type, discount, level);
+    public SecondHalfPricePromotion(int id, String type, int discount, int level) {
+        super(id, type, discount, level);
     }
 
     public SecondHalfPricePromotion(String barcode, String type) {
