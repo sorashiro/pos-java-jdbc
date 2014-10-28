@@ -7,8 +7,8 @@ import java.sql.SQLException;
 public class DatabaseUtil {
     private static final String driverName = "com.mysql.jdbc.Driver";
     private static final String url = "jdbc:mysql://localhost:3306/pos_java_jdbc";
-    private static final String user = "root";
-    private static final String password = "123321";
+    private static final String user = "lucy";
+    private static final String password = "lucy";
     private static Connection connection = null;
 
     public static Connection getConnection() {
