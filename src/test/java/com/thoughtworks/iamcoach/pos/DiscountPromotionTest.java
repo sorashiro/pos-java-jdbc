@@ -7,7 +7,7 @@ import org.junit.Test;
 import static org.fest.assertions.api.Assertions.assertThat;
 
 public class DiscountPromotionTest {
-  DiscountPromotion discountPromotion = new DiscountPromotion("discount:50");
+  DiscountPromotion discountPromotion = new DiscountPromotion(2, "second_half_price", 50, 2);
 
   @Test
   public void calculate_test() {
