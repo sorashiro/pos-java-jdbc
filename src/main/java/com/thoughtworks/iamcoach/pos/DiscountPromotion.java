@@ -5,15 +5,6 @@ import com.thoughtworks.iamcoach.pos.vo.Promotion;
 
 public class DiscountPromotion extends Promotion {
 
-
-    public DiscountPromotion(String barcode, String type) {
-        super(barcode, type);
-    }
-
-    public DiscountPromotion(int id, String type, int level) {
-        super(id, type, level);
-    }
-
     public DiscountPromotion(int id, String type, int discount, int level) {
         super(id, type, discount, level);
     }
