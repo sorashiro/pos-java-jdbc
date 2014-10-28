@@ -22,9 +22,9 @@ public class ItemDao {
                         resultSet.getString("name"), resultSet.getString("unit"),
                         resultSet.getDouble("price"), resultSet.getString("category"));
                 itemList.add(item);
-                statement.close();
-                resultSet.close();
             }
+            statement.close();
+            resultSet.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -48,7 +48,6 @@ public class ItemDao {
         }
         return item;
     }
-
 
 
 }

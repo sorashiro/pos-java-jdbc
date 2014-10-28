@@ -30,4 +30,8 @@ public class ItemService {
     public Item findItemById(int id) {
         return itemDao.getItemById(id);
     }
+
+    public List<Item> findItems() {
+        return itemDao.getItems();
+    }
 }
