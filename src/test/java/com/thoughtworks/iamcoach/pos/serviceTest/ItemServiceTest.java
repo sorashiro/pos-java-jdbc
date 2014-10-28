@@ -20,7 +20,7 @@ public class ItemServiceTest {
     @Test
     public void find_item_by_id_test() {
         int id = 1;
-        assertThat(itemService.findItemById(id).getBarcode).isEqualTo("ITEM000001");
+        assertThat(itemService.findItemById(id).getBarcode()).isEqualTo("ITEM000001");
     }
 }
 
