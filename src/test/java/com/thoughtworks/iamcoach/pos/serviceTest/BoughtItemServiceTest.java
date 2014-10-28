@@ -1,5 +1,6 @@
 package com.thoughtworks.iamcoach.pos.serviceTest;
 
+import com.thoughtworks.iamcoach.pos.service.BoughtItemService;
 import com.thoughtworks.iamcoach.pos.vo.BoughtItem;
 import com.thoughtworks.iamcoach.pos.vo.Item;
 import com.thoughtworks.iamcoach.pos.vo.Promotion;
@@ -7,6 +8,8 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.fest.assertions.api.Assertions.assertThat;
 
 public class BoughtItemServiceTest {
     private Item item = new Item(1, "ITEM000001", "雪碧", "瓶", 3.50, "饮料");
@@ -21,7 +24,7 @@ public class BoughtItemServiceTest {
         promotionList.add(secondHalfPricePromotion);
         promotionList.add(discountPromotion);
         item.setPromotionList(promotionList);
-        BoughtItem boughtItem = new BoughtItem(item, 2.00);
-        assertThat(boughtItem.calculatePrice().getSubtotal()).isEqualTo(40.0);
+        BoughtItemService boughtItemService = new BoughtItemService();
+        assertThat(boughtItemService.calculatePrice(item).getSubtotal()).isEqualTo(40.0);
     }
 }
