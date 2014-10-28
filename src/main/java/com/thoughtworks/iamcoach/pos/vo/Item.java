@@ -42,6 +42,10 @@ public class Item {
         return price;
     }
 
+    public void setPromotionList(List<Promotion> promotionList) {
+        this.promotionList = promotionList;
+    }
+
     public List<Promotion> getPromotionList() {
         return promotionList;
     }
