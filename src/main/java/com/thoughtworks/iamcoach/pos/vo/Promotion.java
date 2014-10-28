@@ -20,8 +20,7 @@ public class Promotion {
         this.level = level;
     }
 
-    public Promotion(String barcode, int id, String type, int discount, int level) {
-        this.barcode = barcode;
+    public Promotion(int id, String type, int discount, int level) {
         this.id = id;
         this.type = type;
         this.discount = discount;

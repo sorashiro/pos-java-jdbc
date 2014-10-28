@@ -51,7 +51,7 @@ public class ItemDao {
 
     public List<Promotion> getItemPromotionList(int id) {
         List<Promotion> promotionList = new ArrayList<Promotion>();
-        String sql = "SELECT promotion.* FROM promotion,promotion_item " +
+        String sql = "SELECT promotion.*,promotion_item.discount FROM promotion,promotion_item " +
                 "WHERE promotion_item.item_id=? AND promotion.id=promotion_item.promotion_id";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -59,7 +59,7 @@ public class ItemDao {
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 Promotion promotion = new Promotion(resultSet.getInt("id"), resultSet.getString("type"),
-                resultSet.getInt("level"));
+                resultSet.getInt("discount"), resultSet.getInt("level"));
                 promotionList.add(promotion);
             }
 
