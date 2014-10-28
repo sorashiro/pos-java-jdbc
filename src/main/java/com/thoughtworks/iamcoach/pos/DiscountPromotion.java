@@ -14,8 +14,8 @@ public class DiscountPromotion extends Promotion {
         super(id, type, level);
     }
 
-    public DiscountPromotion(String barcode, int id, String type, int discount, int level) {
-        super(barcode, id, type, discount, level);
+    public DiscountPromotion(int id, String type, int discount, int level) {
+        super(id, type, discount, level);
     }
 
     public PrintItem calculate(BoughtItem boughtItem) {
