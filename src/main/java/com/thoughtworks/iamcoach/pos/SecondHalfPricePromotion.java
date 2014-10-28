@@ -1,11 +1,21 @@
 package com.thoughtworks.iamcoach.pos;
 
 import com.thoughtworks.iamcoach.pos.vo.BoughtItem;
+import com.thoughtworks.iamcoach.pos.vo.Promotion;
 
-public class SecondHalfPricePromotion extends PromotionType {
-    @Override
-    public String getPromotionType() {
-        return PromotionType.SECOND_HALF_PRICE;
+public class SecondHalfPricePromotion extends Promotion {
+
+
+    public SecondHalfPricePromotion(String barcode, int id, String type, int discount, int level) {
+        super(barcode, id, type, discount, level);
+    }
+
+    public SecondHalfPricePromotion(String barcode, String type) {
+        super(barcode, type);
+    }
+
+    public SecondHalfPricePromotion(int id, String type, int level) {
+        super(id, type, level);
     }
 
     public PrintItem calculate(BoughtItem boughtItem) {
