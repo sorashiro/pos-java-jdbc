@@ -50,7 +50,13 @@ public class BoughtItem {
     }
 
     private PrintItem calculatePrintItem(Promotion promotion) {
+
         PrintItem printItem = null;
         return  printItem;
+    }
+
+    public PrintItem calculate(BoughtItem boughtItem) {
+        Double subtotal = boughtItem.getPrice() * boughtItem.getNumber();
+        return new PrintItem(boughtItem, subtotal);
     }
 }
