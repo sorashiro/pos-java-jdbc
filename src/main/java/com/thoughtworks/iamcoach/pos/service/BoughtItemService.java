@@ -14,15 +14,9 @@ public class BoughtItemService {
         PrintItem printItem = new PrintItem(boughtItem,40);
         List<PrintItem> printItems = new ArrayList<PrintItem>();
         for(Promotion promotion : item.getPromotionList()) {
-            PrintItem pi = calculatePrintItem(promotion);
+            PrintItem pi = promotion.calculate(boughtItem);
             printItems.add(pi);
         }
         return printItem;
-    }
-
-    private PrintItem calculatePrintItem(Promotion promotion) {
-
-        PrintItem printItem = null;
-        return  printItem;
     }
 }
