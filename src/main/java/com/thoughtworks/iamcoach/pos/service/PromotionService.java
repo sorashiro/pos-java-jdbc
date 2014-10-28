@@ -12,15 +12,11 @@ public class PromotionService {
     private PromotionType promotionType;
     private StorageService storageService = new StorageService();
 
-    public void setPromotionType(String barcode) {
-        this.promotionType = PromotionType.newPromotionType(barcode);
-    }
 
     public List<PrintItem> calculatePromotion(List<BoughtItem> boughtItems) {
         List<PrintItem> printItemList = new ArrayList<PrintItem>();
         for (BoughtItem boughtItem : boughtItems) {
 
-            setPromotionType(boughtItem.getBarcode());
             printItemList.add(promotionType.calculate(boughtItem));
         }
         return printItemList;
