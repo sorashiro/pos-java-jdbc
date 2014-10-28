@@ -24,12 +24,9 @@ public class ItemDao {
                         resultSet.getDouble("price"), resultSet.getString("category"));
                 itemList.add(item);
             }
-            statement.close();
-            resultSet.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        DatabaseUtil.closeConnection();
         return itemList;
     }
 

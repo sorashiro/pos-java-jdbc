@@ -28,10 +28,13 @@ public class ItemService {
     }
 
     public Item findItemById(int id) {
-        return itemDao.getItemById(id);
+        Item item = itemDao.getItemById(id);
+        item.setPromotionList(itemDao.getItemPromotionList(id));
+        return item;
     }
 
     public List<Item> findItems() {
         return itemDao.getItems();
     }
+
 }
