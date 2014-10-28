@@ -29,7 +29,7 @@ public class Pos {
             number = Double.parseDouble(barcodes[1]);
         }
 
-        return new BoughtItem(itemService.findItem(barcodes[0]), number * times);
+        return new BoughtItem(itemService.findItemByBarcode(barcodes[0]), number * times);
     }
 
     private List<String> uniqueArray(List<String> cartBarcodes) {
