@@ -28,22 +28,21 @@ CREATE TABLE promotion_item (
 );
 
 ## 插入初始数据
-INSERT INTO item (id,barcode,name,unit,price)
-    VALUES(1,'ITEM000001','雪碧','瓶',3.5),
-      (2,'ITEM000002','苹果','斤',10.00),
-      (3,'ITEM000003','香蕉','斤',5.00),
-      (4,'ITEM000004','方便面','包',1.50),
-      (5,'ITEM000005','电池','个',5.00),
-      (6,'ITEM000006','荔枝','斤',10.00),
-      (7,'ITEM000007','羽毛球拍','副',100.00),
-      (8,'ITEM000008','袜子','双',5.00),
-      (9,'ITEM000009','牙刷','个',5.00);
+INSERT INTO item (id,barcode,name,unit,price,category)
+    VALUES(1,'ITEM000001','雪碧','瓶',3.5,'饮料'),
+      (2,'ITEM000002','苹果','斤',10.00,'水果'),
+      (3,'ITEM000003','香蕉','斤',5.00,'水果'),
+      (4,'ITEM000004','方便面','包',1.50,'食品'),
+      (5,'ITEM000005','电池','个',5.00,'日用品'),
+      (6,'ITEM000006','荔枝','斤',10.00,'水果'),
+      (7,'ITEM000007','羽毛球拍','副',100.00,'运动器材'),
+      (8,'ITEM000008','袜子','双',5.00,'日用品'),
+      (9,'ITEM000009','牙刷','个',5.00,'日用品');
 
 INSERT INTO promotion (id, type, level)
     VALUES (1, 'buy_two_get_one_free',1),
       (2, 'second_half_price_promotion',2),
-      (3, 'discount',3)
-;
+      (3, 'discount',3);
 
 INSERT INTO promotion_item (promotion_id, item_id)
     VALUES (1,1),
