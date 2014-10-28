@@ -33,5 +33,11 @@ public class ItemServiceTest {
         int id = 1;
         assertThat(itemService.findItemById(id).getPromotionList().size()).isEqualTo(2);
     }
+
+    @Test
+    public void get_item_by_barcode() {
+        String barcode = "ITEM000001";
+        assertThat(itemService.findItemByBarcode(barcode).getName()).isEqualTo("雪碧");
+    }
 }
 
