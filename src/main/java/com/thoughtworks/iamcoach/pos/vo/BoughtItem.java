@@ -42,6 +42,15 @@ public class BoughtItem {
         BoughtItem boughtItem = new BoughtItem(item, 4);
         PrintItem printItem = new PrintItem(boughtItem,40);
         List<PrintItem> printItems = new ArrayList<PrintItem>();
+        for(Promotion promotion : item.getPromotionList()) {
+            PrintItem pi = calculatePrintItem(promotion);
+            printItems.add(pi);
+        }
         return printItem;
+    }
+
+    private PrintItem calculatePrintItem(Promotion promotion) {
+        PrintItem printItem = null;
+        return  printItem;
     }
 }
