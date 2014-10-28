@@ -1,5 +1,6 @@
 package com.thoughtworks.iamcoach.pos.service;
 
+import com.thoughtworks.iamcoach.pos.dao.ItemDao;
 import com.thoughtworks.iamcoach.pos.vo.Item;
 import com.thoughtworks.iamcoach.pos.vo.Promotion;
 
@@ -7,6 +8,7 @@ import java.util.List;
 
 public class ItemService {
 
+    ItemDao itemDao = new ItemDao();
     StorageService storageService = new StorageService();
     PromotionService promotionService = new PromotionService();
     public Item findItem(String barcode) {
@@ -23,5 +25,9 @@ public class ItemService {
         }
 
         return result;
+    }
+
+    public Item findItemById(int id) {
+        return itemDao.getItemById(id);
     }
 }
