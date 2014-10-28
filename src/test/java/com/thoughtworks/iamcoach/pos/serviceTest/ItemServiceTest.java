@@ -16,5 +16,11 @@ public class ItemServiceTest {
     assertThat(itemService.findItem(barcode).getPrice()).isEqualTo(3.50);
     assertThat(itemService.findItem(barcode).getUnit()).isEqualTo("瓶");
   }
+
+    @Test
+    public void find_item_by_id_test() {
+        int id = 1;
+        assertThat(itemService.findItemById(id).getBarcode).isEqualTo("ITEM000001");
+    }
 }
 
