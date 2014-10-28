@@ -8,18 +8,33 @@ public class Item {
     private String name;
     private String unit;
     private double price;
+    private String category;
     private List<Promotion> promotionList;
 
     public Item() {
     }
 
-    public Item(int id, String barcode, String name, String unit, double price, List<Promotion> promotionList) {
+    public Item(int id, String barcode, String name, String unit, double price, String category, List<Promotion> promotionList) {
         this.id = id;
         this.barcode = barcode;
         this.name = name;
         this.unit = unit;
         this.price = price;
+        this.category = category;
         this.promotionList = promotionList;
+    }
+
+    public Item(int id, String barcode, String name, String unit, double price, String category) {
+        this.id = id;
+        this.barcode = barcode;
+        this.name = name;
+        this.unit = unit;
+        this.price = price;
+        this.category = category;
+    }
+
+    public String getCategory() {
+        return category;
     }
 
     public int getId() {
