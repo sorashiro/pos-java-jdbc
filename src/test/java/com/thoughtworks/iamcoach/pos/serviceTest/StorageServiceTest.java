@@ -1,4 +1,4 @@
-package com.thoughtworks.iamcoach.pos;
+package com.thoughtworks.iamcoach.pos.serviceTest;
 
 import com.thoughtworks.iamcoach.pos.service.StorageService;
 import org.junit.Test;
