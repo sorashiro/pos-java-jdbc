@@ -23,7 +23,8 @@ CREATE TABLE promotion (
 CREATE TABLE promotion_item (
   promotion_id INT REFERENCES promotion(id),
   item_id INT REFERENCES item(id),
-  discount INT
+  discount INT,
+  UNIQUE (promotion_id,item_id)
 );
 
 ## 插入初始数据
@@ -41,7 +42,8 @@ INSERT INTO item (id,barcode,name,unit,price)
 INSERT INTO promotion (id, type, level)
     VALUES (1, 'buy_two_get_one_free',1),
       (2, 'second_half_price_promotion',2),
-      (3, 'discount',3);
+      (3, 'discount',3)
+;
 
 INSERT INTO promotion_item (promotion_id, item_id)
     VALUES (1,1),
