@@ -4,7 +4,6 @@ import com.thoughtworks.iamcoach.pos.service.StorageService;
 import com.thoughtworks.iamcoach.pos.vo.BoughtItem;
 import com.thoughtworks.iamcoach.pos.vo.Promotion;
 
-import java.util.List;
 
 public class PromotionType {
     public String getPromotionType() {

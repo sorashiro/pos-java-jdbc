@@ -1,8 +1,6 @@
 package com.thoughtworks.iamcoach.pos.vo;
 
-import com.thoughtworks.iamcoach.pos.PrintItem;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class BoughtItem {
