@@ -9,6 +9,7 @@ public class BuyTwoGetOneFreePromotion extends Promotion {
         super(id, type, level);
     }
 
+    @Override
     public double calculate(BoughtItem boughtItem) {
 
         double number = boughtItem.getNumber();

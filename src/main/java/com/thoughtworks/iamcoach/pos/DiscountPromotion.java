@@ -9,6 +9,7 @@ public class DiscountPromotion extends Promotion {
         super(id, type, discount, level);
     }
 
+    @Override
     public double calculate(BoughtItem boughtItem) {
         double number = boughtItem.getNumber();
         double subtotal = boughtItem.getPrice() * number * getDiscount() / 100;
