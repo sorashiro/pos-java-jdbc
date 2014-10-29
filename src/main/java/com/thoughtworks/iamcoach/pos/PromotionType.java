@@ -6,14 +6,10 @@ import com.thoughtworks.iamcoach.pos.vo.Promotion;
 
 
 public class PromotionType {
-    public String getPromotionType() {
-        return "";
-    }
 
     static final String BUY_TWO_GET_ONE_FREE = "buy_two_get_one_free";
     static final String SECOND_HALF_PRICE = "second_half_price";
     static final String DISCOUNT = "discount";
-    static StorageService storageService = new StorageService();
 
     public static Promotion createPromotion(int id, String type, int discount, int level) {
         Promotion promotion = null;
