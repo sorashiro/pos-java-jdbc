@@ -18,13 +18,5 @@ public class BoughtItemServiceTest {
     private Promotion secondHalfPricePromotion = new Promotion(1, "second_half_price", 2);
     private Promotion discountPromotion = new Promotion(1, "discount", 3);
 
-    @Test
-    public void calculate_price_test() {
-        promotionList.add(buyTwoGetOneFreePromotion);
-        promotionList.add(secondHalfPricePromotion);
-        promotionList.add(discountPromotion);
-        item.setPromotionList(promotionList);
-        BoughtItemService boughtItemService = new BoughtItemService();
-        assertThat(boughtItemService.calculatePrice(item).getSubtotal()).isEqualTo(40.0);
-    }
+
 }
