@@ -14,6 +14,6 @@ public class DiscountPromotionTest {
     Item item = new Item("ITEM000002", "apple", "kg", 10.00);
 
     BoughtItem boughtItem = new BoughtItem(item, 5.0);
-    assertThat(discountPromotion.calculate(boughtItem).getSubtotal()).isEqualTo(25.0);
+    assertThat(discountPromotion.calculate(boughtItem)).isEqualTo(25.0);
   }
 }

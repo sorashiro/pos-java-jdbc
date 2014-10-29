@@ -13,9 +13,10 @@ public class BoughtItemService {
         BoughtItem boughtItem = new BoughtItem(item, 4);
         PrintItem printItem = new PrintItem(boughtItem,40);
         List<PrintItem> printItems = new ArrayList<PrintItem>();
+        List<Double> subtotals = new ArrayList<Double>();
         for(Promotion promotion : item.getPromotionList()) {
-            PrintItem pi = promotion.calculate(boughtItem);
-            printItems.add(pi);
+            double subtotal = promotion.calculate(boughtItem);
+            subtotals.add(subtotal);
         }
         //TODO 对printItems进行排序
 
