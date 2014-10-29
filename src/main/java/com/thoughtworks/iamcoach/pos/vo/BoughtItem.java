@@ -9,6 +9,7 @@ public class BoughtItem {
     private String category;
     private double number;
     private Promotion promotion;
+    private double subtotal;
 
     public BoughtItem(int id, String barcode, String name, String unit,
                       double price, String category, double number, Promotion promotion) {
@@ -22,6 +23,18 @@ public class BoughtItem {
         this.promotion = promotion;
     }
 
+    public BoughtItem(Item item, double number, Promotion promotion, double subtotal) {
+        this.id = item.getId();
+        this.barcode = item.getBarcode();
+        this.name = item.getName();
+        this.unit = item.getUnit();
+        this.price = item.getPrice();
+        this.category = item.getCategory();
+        this.number = number;
+        this.promotion = promotion;
+        this.subtotal = subtotal;
+    }
+    
     public int getId() {
         return id;
     }
