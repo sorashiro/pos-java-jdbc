@@ -44,11 +44,11 @@ public class Pos {
             BoughtItem boughtItem = new BoughtItem(item, number, promotion, subtotal);
             boughtItems.add(boughtItem);
         }
-        BoughtItem boughtItem = findMixSubtotal(boughtItems);
+        BoughtItem boughtItem = findMinSubtotal(boughtItems);
         return boughtItem;
     }
 
-    private BoughtItem findMixSubtotal(List<BoughtItem> boughtItems) {
+    private BoughtItem findMinSubtotal(List<BoughtItem> boughtItems) {
         for (BoughtItem boughtItem : boughtItems) {
            System.out.print(boughtItem.getSubtotal() + "---------");
         }
