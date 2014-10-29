@@ -1,6 +1,7 @@
 package com.thoughtworks.iamcoach.pos;
 
 import com.thoughtworks.iamcoach.pos.vo.BoughtItem;
+import com.thoughtworks.iamcoach.pos.vo.Promotion;
 
 public class PrintItem implements Comparable{
     private String name;
@@ -9,6 +10,7 @@ public class PrintItem implements Comparable{
     private String barcode;
     private double number;
     private double subtotal;
+    private Promotion promotion;
 
     public PrintItem(BoughtItem boughtItem, double subtotal) {
         this.subtotal = subtotal;
@@ -17,6 +19,10 @@ public class PrintItem implements Comparable{
         this.price = boughtItem.getPrice();
         this.barcode = boughtItem.getBarcode();
         this.number = boughtItem.getNumber();
+    }
+
+    public Promotion getPromotion() {
+        return promotion;
     }
 
     public double getSubtotal() {
