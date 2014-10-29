@@ -6,6 +6,7 @@ import com.thoughtworks.iamcoach.pos.vo.Item;
 import com.thoughtworks.iamcoach.pos.vo.Promotion;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Pos {
@@ -48,12 +49,16 @@ public class Pos {
     }
 
     private BoughtItem findMixSubtotal(List<BoughtItem> boughtItems) {
-        for(BoughtItem boughtItem : boughtItems) {
-
+        for (BoughtItem boughtItem : boughtItems) {
+           System.out.print(boughtItem.getSubtotal() + "---------");
         }
-        Promotion promotion = new Promotion(1, "1", 1);
-        Item item = new Item();
-        return new BoughtItem(item, 2, promotion, 40);
+        System.out.print("\n");
+        Collections.sort(boughtItems);
+        for (BoughtItem boughtItem : boughtItems) {
+            System.out.print(boughtItem.getSubtotal() + "++++++");
+        }
+        System.out.print("\n");
+        return boughtItems.get(0);
     }
 
     private List<String> uniqueArray(List<String> cartBarcodes) {
