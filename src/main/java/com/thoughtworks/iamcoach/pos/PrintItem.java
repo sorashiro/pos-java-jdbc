@@ -3,7 +3,7 @@ package com.thoughtworks.iamcoach.pos;
 import com.thoughtworks.iamcoach.pos.vo.BoughtItem;
 import com.thoughtworks.iamcoach.pos.vo.Promotion;
 
-public class PrintItem implements Comparable{
+public class PrintItem{
     private String name;
     private String unit;
     private double price;
@@ -47,11 +47,5 @@ public class PrintItem implements Comparable{
 
     public double getNumber() {
         return number;
-    }
-
-    @Override
-    public int compareTo(Object o) {
-        double result = this.subtotal - ((PrintItem)o).getSubtotal();
-        return (int)result;
     }
 }
