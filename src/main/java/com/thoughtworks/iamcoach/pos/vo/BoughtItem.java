@@ -1,40 +1,56 @@
 package com.thoughtworks.iamcoach.pos.vo;
 
-
-import java.util.List;
-
 public class BoughtItem {
-    private Item item;
+    private int id;
+    private String barcode;
+    private String name;
+    private String unit;
+    private double price;
+    private String category;
     private double number;
+    private Promotion promotion;
 
-    public BoughtItem(Item item, double number) {
-        this.item = item;
+    public BoughtItem(int id, String barcode, String name, String unit,
+                      double price, String category, double number, Promotion promotion) {
+        this.id = id;
+        this.barcode = barcode;
+        this.name = name;
+        this.unit = unit;
+        this.price = price;
+        this.category = category;
         this.number = number;
+        this.promotion = promotion;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getBarcode() {
-        return item.getBarcode();
+        return barcode;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getUnit() {
+        return unit;
     }
 
     public double getPrice() {
-        return item.getPrice();
+        return price;
+    }
+
+    public String getCategory() {
+        return category;
     }
 
     public double getNumber() {
         return number;
     }
 
-    public String getName() {
-        return item.getName();
+    public Promotion getPromotion() {
+        return promotion;
     }
-
-    public String getUnit() {
-        return item.getUnit();
-    }
-
-    public List<Promotion> getPromotionList() {
-        return item.getPromotionList();
-    }
-
-
 }
