@@ -9,9 +9,9 @@ public class DiscountPromotion extends Promotion {
         super(id, type, discount, level);
     }
 
-    public PrintItem calculate(BoughtItem boughtItem) {
+    public double calculate(BoughtItem boughtItem) {
         double number = boughtItem.getNumber();
         double subtotal = boughtItem.getPrice() * number * getDiscount() / 100;
-        return new PrintItem(boughtItem, subtotal);
+        return subtotal;
     }
 }

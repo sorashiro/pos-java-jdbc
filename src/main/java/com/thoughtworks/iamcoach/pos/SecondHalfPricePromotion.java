@@ -9,13 +9,13 @@ public class SecondHalfPricePromotion extends Promotion {
         super(id, type, level);
     }
 
-    public PrintItem calculate(BoughtItem boughtItem) {
+    public double calculate(BoughtItem boughtItem) {
         double number = boughtItem.getNumber();
 
         double total = boughtItem.getPrice() * number;
         double discountTotal = (0.5 * boughtItem.getPrice()) * (int) (number / 2);
 
         double subtotal = total - discountTotal;
-        return new PrintItem(boughtItem, subtotal);
+        return subtotal;
     }
 }

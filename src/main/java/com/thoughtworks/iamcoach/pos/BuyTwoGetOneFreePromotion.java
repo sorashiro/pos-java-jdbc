@@ -9,12 +9,11 @@ public class BuyTwoGetOneFreePromotion extends Promotion {
         super(id, type, level);
     }
 
-    public PrintItem calculate(BoughtItem boughtItem) {
+    public double calculate(BoughtItem boughtItem) {
 
         double number = boughtItem.getNumber();
         double payNumber = number - (int) (number / 3);
 
-        double subtotal = boughtItem.getPrice() * payNumber;
-        return new PrintItem(boughtItem, subtotal);
+        return boughtItem.getPrice() * payNumber;
     }
 }
