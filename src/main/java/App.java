@@ -19,6 +19,7 @@ public class App {
         List<PrintItem> printItemList = new ArrayList<PrintItem>();
         for(BoughtItem boughtItem : boughtItems) {
             PrintItem printItem = new PrintItem(boughtItem);
+            printItemList.add(printItem);
         }
         Output.printShoppingList(printItemList);
     }
