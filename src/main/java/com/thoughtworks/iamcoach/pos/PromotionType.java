@@ -1,6 +1,5 @@
 package com.thoughtworks.iamcoach.pos;
 
-import com.thoughtworks.iamcoach.pos.vo.BoughtItem;
 import com.thoughtworks.iamcoach.pos.vo.Promotion;
 
 
@@ -22,10 +21,5 @@ public class PromotionType {
         }
 
         return promotion;
-    }
-
-    public PrintItem calculate(BoughtItem boughtItem) {
-        Double subtotal = boughtItem.getPrice() * boughtItem.getNumber();
-        return new PrintItem(boughtItem, subtotal);
     }
 }
