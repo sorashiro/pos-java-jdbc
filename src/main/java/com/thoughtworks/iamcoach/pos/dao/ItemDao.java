@@ -1,5 +1,6 @@
 package com.thoughtworks.iamcoach.pos.dao;
 
+import com.thoughtworks.iamcoach.pos.PromotionType;
 import com.thoughtworks.iamcoach.pos.util.DatabaseUtil;
 import com.thoughtworks.iamcoach.pos.vo.Item;
 import com.thoughtworks.iamcoach.pos.vo.Promotion;
@@ -58,8 +59,8 @@ public class ItemDao {
             preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                Promotion promotion = new Promotion(resultSet.getInt("id"), resultSet.getString("type"),
-                resultSet.getInt("discount"), resultSet.getInt("level"));
+                Promotion promotion = PromotionType.createPromotion(resultSet.getInt("id"), resultSet.getString("type"),
+                        resultSet.getInt("discount"), resultSet.getInt("level"));
                 promotionList.add(promotion);
             }
 
