@@ -34,7 +34,7 @@ public class BoughtItem {
         this.promotion = promotion;
         this.subtotal = subtotal;
     }
-    
+
     public int getId() {
         return id;
     }

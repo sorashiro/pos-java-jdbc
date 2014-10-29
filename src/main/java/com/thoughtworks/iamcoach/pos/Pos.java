@@ -31,16 +31,29 @@ public class Pos {
             number = Double.parseDouble(barcodes[1]);
         }
 
-        Promotion promotion = determinePromotionType(itemService.findItemByBarcode(barcodes[0]), number * times);
-        return new BoughtItem(itemService.findItemByBarcode(barcodes[0]), number * times);
+        BoughtItem boughtItem = determinePromotionType(itemService.findItemByBarcode(barcodes[0]), number * times);
+        return boughtItem;
     }
 
-    private Promotion determinePromotionType(Item item, double number) {
+    private BoughtItem determinePromotionType(Item item, double number) {
         List<Promotion> promotionList = item.getPromotionList();
+        List<BoughtItem> boughtItems = new ArrayList<BoughtItem>();
         for(Promotion promotion : promotionList) {
-            promotion.calculate(item, number)
+            double subtotal = promotion.calculate(item, number);
+            BoughtItem boughtItem = new BoughtItem(item, number, promotion, subtotal);
+            boughtItems.add(boughtItem);
         }
-        return null;
+        BoughtItem boughtItem = findMixSubtotal(boughtItems);
+        return boughtItem;
+    }
+
+    private BoughtItem findMixSubtotal(List<BoughtItem> boughtItems) {
+        for(BoughtItem boughtItem : boughtItems) {
+
+        }
+        Promotion promotion = new Promotion(1, "1", 1);
+        Item item = new Item();
+        return new BoughtItem(item, 2, promotion, 40);
     }
 
     private List<String> uniqueArray(List<String> cartBarcodes) {
