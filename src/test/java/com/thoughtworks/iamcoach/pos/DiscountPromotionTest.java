@@ -13,7 +13,6 @@ public class DiscountPromotionTest {
   public void calculate_test() {
     Item item = new Item("ITEM000002", "apple", "kg", 10.00);
 
-    BoughtItem boughtItem = new BoughtItem(item, 5.0);
-    assertThat(discountPromotion.calculate(boughtItem)).isEqualTo(25.0);
+    assertThat(discountPromotion.calculate(item, 5.0)).isEqualTo(25.0);
   }
 }
