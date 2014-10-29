@@ -29,6 +29,7 @@ public class ItemServiceTest {
     public void find_item_by_barcode_test() {
         String barcode = "ITEM000001";
         assertThat(itemService.findItemByBarcode(barcode).getName()).isEqualTo("雪碧");
+        assertThat(itemService.findItemByBarcode(barcode).getPromotionList().size()).isEqualTo(2);
     }
 }
 
