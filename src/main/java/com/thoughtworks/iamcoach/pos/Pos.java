@@ -2,6 +2,8 @@ package com.thoughtworks.iamcoach.pos;
 
 import com.thoughtworks.iamcoach.pos.service.ItemService;
 import com.thoughtworks.iamcoach.pos.vo.BoughtItem;
+import com.thoughtworks.iamcoach.pos.vo.Item;
+import com.thoughtworks.iamcoach.pos.vo.Promotion;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +31,16 @@ public class Pos {
             number = Double.parseDouble(barcodes[1]);
         }
 
+        Promotion promotion = determinePromotionType(itemService.findItemByBarcode(barcodes[0]), number * times);
         return new BoughtItem(itemService.findItemByBarcode(barcodes[0]), number * times);
+    }
+
+    private Promotion determinePromotionType(Item item, double number) {
+        List<Promotion> promotionList = item.getPromotionList();
+        for(Promotion promotion : promotionList) {
+            promotion.calculate(item, number)
+        }
+        return null;
     }
 
     private List<String> uniqueArray(List<String> cartBarcodes) {

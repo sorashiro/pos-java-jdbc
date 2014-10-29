@@ -1,6 +1,7 @@
 package com.thoughtworks.iamcoach.pos;
 
 import com.thoughtworks.iamcoach.pos.vo.BoughtItem;
+import com.thoughtworks.iamcoach.pos.vo.Item;
 import com.thoughtworks.iamcoach.pos.vo.Promotion;
 
 public class SecondHalfPricePromotion extends Promotion {
@@ -10,11 +11,10 @@ public class SecondHalfPricePromotion extends Promotion {
     }
 
     @Override
-    public double calculate(BoughtItem boughtItem) {
-        double number = boughtItem.getNumber();
+    public double calculate(Item item, double number) {
 
-        double total = boughtItem.getPrice() * number;
-        double discountTotal = (0.5 * boughtItem.getPrice()) * (int) (number / 2);
+        double total = item.getPrice() * number;
+        double discountTotal = (0.5 * item.getPrice()) * (int) (number / 2);
 
         double subtotal = total - discountTotal;
         return subtotal;

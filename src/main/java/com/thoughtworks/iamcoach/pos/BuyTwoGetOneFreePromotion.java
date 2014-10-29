@@ -1,6 +1,6 @@
 package com.thoughtworks.iamcoach.pos;
 
-import com.thoughtworks.iamcoach.pos.vo.BoughtItem;
+import com.thoughtworks.iamcoach.pos.vo.Item;
 import com.thoughtworks.iamcoach.pos.vo.Promotion;
 
 public class BuyTwoGetOneFreePromotion extends Promotion {
@@ -10,11 +10,10 @@ public class BuyTwoGetOneFreePromotion extends Promotion {
     }
 
     @Override
-    public double calculate(BoughtItem boughtItem) {
+    public double calculate(Item item, double number) {
 
-        double number = boughtItem.getNumber();
         double payNumber = number - (int) (number / 3);
 
-        return boughtItem.getPrice() * payNumber;
+        return item.getPrice() * payNumber;
     }
 }
