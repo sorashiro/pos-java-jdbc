@@ -12,8 +12,8 @@ public class PrintItem implements Comparable{
     private double subtotal;
     private Promotion promotion;
 
-    public PrintItem(BoughtItem boughtItem, double subtotal) {
-        this.subtotal = subtotal;
+    public PrintItem(BoughtItem boughtItem) {
+        this.subtotal = boughtItem.getSubtotal();
         this.name = boughtItem.getName();
         this.unit = boughtItem.getUnit();
         this.price = boughtItem.getPrice();

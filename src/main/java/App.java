@@ -2,7 +2,9 @@ import com.thoughtworks.iamcoach.pos.*;
 import com.thoughtworks.iamcoach.pos.service.PromotionService;
 import com.thoughtworks.iamcoach.pos.service.StorageService;
 import com.thoughtworks.iamcoach.pos.vo.BoughtItem;
+import com.thoughtworks.iamcoach.pos.vo.Promotion;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class App {
@@ -14,8 +16,10 @@ public class App {
         Pos pos = new Pos();
         List<BoughtItem> boughtItems = pos.handleBarcodes(cartBarcodes);
 
-        PromotionService promotionService = new PromotionService();
-        List<PrintItem> printItemList = promotionService.calculatePromotion(boughtItems);
+        List<PrintItem> printItemList = new ArrayList<PrintItem>();
+        for(BoughtItem boughtItem : boughtItems) {
+            PrintItem printItem = new PrintItem(boughtItem);
+        }
         Output.printShoppingList(printItemList);
     }
 

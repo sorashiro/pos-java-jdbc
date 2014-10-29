@@ -35,6 +35,10 @@ public class BoughtItem {
         this.subtotal = subtotal;
     }
 
+    public double getSubtotal() {
+        return subtotal;
+    }
+
     public int getId() {
         return id;
     }
