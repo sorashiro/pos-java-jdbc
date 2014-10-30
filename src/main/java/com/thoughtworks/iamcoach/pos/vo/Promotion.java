@@ -26,6 +26,10 @@ public class Promotion {
         return discount;
     }
 
+    public int getLevel() {
+        return level;
+    }
+
     public String getType() {
         return type;
     }
