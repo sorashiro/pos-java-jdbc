@@ -1,4 +1,5 @@
 import com.thoughtworks.iamcoach.pos.*;
+import com.thoughtworks.iamcoach.pos.service.BoughtItemService;
 import com.thoughtworks.iamcoach.pos.util.FileUtil;
 import com.thoughtworks.iamcoach.pos.vo.BoughtItem;
 
@@ -9,11 +10,10 @@ public class App {
     private static final String CART_FILE = "src/main/resources/cart.txt";
 
     public static void main(String[] args) {
+        BoughtItemService boughtItemService = new BoughtItemService();
+        List<String> cartBarcodes = FileUtil.textToList(CART_FILE);
 
-        List<String> cartBarcodes = FileUtil.textToList(CART_FILE);;
-
-        Pos pos = new Pos();
-        List<BoughtItem> boughtItems = pos.barcodesToBoughtItems(cartBarcodes);
+        List<BoughtItem> boughtItems = boughtItemService.barcodesToBoughtItems(cartBarcodes);
 
         List<PrintItem> printItemList = new ArrayList<PrintItem>();
         for(BoughtItem boughtItem : boughtItems) {
