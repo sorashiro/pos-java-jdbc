@@ -3,7 +3,7 @@ package com.thoughtworks.iamcoach.pos;
 import com.thoughtworks.iamcoach.pos.vo.Promotion;
 
 
-public class PromotionType {
+public class PromotionFactory {
 
     static final String BUY_TWO_GET_ONE_FREE = "buy_two_get_one_free";
     static final String SECOND_HALF_PRICE = "second_half_price";
