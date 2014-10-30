@@ -32,8 +32,7 @@ public class Pos {
             number = Double.parseDouble(barcodes[1]);
         }
 
-        BoughtItem boughtItem = determinePromotionType(itemService.findItemByBarcode(barcodes[0]), number * times);
-        return boughtItem;
+        return determinePromotionType(itemService.findItemByBarcode(barcodes[0]), number * times);
     }
 
     private BoughtItem determinePromotionType(Item item, double number) {
@@ -44,8 +43,7 @@ public class Pos {
             BoughtItem boughtItem = new BoughtItem(item, number, promotion, subtotal);
             boughtItems.add(boughtItem);
         }
-        BoughtItem boughtItem = findMinSubtotal(boughtItems);
-        return boughtItem;
+        return findMinSubtotal(boughtItems);
     }
 
     private BoughtItem findMinSubtotal(List<BoughtItem> boughtItems) {
