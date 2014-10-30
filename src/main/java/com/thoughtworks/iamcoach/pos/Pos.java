@@ -19,7 +19,7 @@ public class Pos {
         for (String uniqueBarcode : uniqueBarcodes) {
             int times = getBarcodeTimes(cartBarcodes, uniqueBarcode);
             String itemBarcode = getItemBarcode(uniqueBarcode);
-            BoughtItem boughtItem = determinePromotionType(itemService.findItemByBarcode(itemBarcode),
+            BoughtItem boughtItem = determineBoughtItem(itemService.findItemByBarcode(itemBarcode),
                     getBarcodeNumber(uniqueBarcode, times));
             boughtItemList.add(boughtItem);
         }
@@ -36,11 +36,11 @@ public class Pos {
         if (barcodes.length == 2) {
             number = Double.parseDouble(barcodes[1]);
         }
-        
+
         return number * times;
     }
 
-    private BoughtItem determinePromotionType(Item item, double number) {
+    private BoughtItem determineBoughtItem(Item item, double number) {
         List<Promotion> promotionList = item.getPromotionList();
         List<BoughtItem> boughtItems = new ArrayList<BoughtItem>();
         for (Promotion promotion : promotionList) {
