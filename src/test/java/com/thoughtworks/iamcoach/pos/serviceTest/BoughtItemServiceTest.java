@@ -20,7 +20,7 @@ public class BoughtItemServiceTest {
     private Promotion discountPromotion = new Promotion(1, "discount", 3);
 
     @Test
-    public void handle_barcodes_test() {
+    public void barcodes_to_boughtItems_test() {
         List<String> cartBarcodes = new ArrayList<String>();
         cartBarcodes.add("ITEM000001");
         cartBarcodes.add("ITEM000001");
