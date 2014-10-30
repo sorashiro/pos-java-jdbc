@@ -10,7 +10,7 @@ public class PromotionType {
     static final String DISCOUNT = "discount";
 
     public static Promotion createPromotion(int id, String type, int discount, int level) {
-        Promotion promotion = null;
+        Promotion promotion = new Promotion();
 
         if (type.equals(BUY_TWO_GET_ONE_FREE)) {
             promotion = new BuyTwoGetOneFreePromotion(id, type, level);
