@@ -11,18 +11,6 @@ public class BoughtItem implements Comparable {
     private Promotion promotion;
     private double subtotal;
 
-    public BoughtItem(int id, String barcode, String name, String unit,
-                      double price, String category, double number, Promotion promotion) {
-        this.id = id;
-        this.barcode = barcode;
-        this.name = name;
-        this.unit = unit;
-        this.price = price;
-        this.category = category;
-        this.number = number;
-        this.promotion = promotion;
-    }
-
     public BoughtItem(Item item, double number, Promotion promotion, double subtotal) {
         this.id = item.getId();
         this.barcode = item.getBarcode();
