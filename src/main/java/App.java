@@ -1,15 +1,16 @@
 import com.thoughtworks.iamcoach.pos.*;
-import com.thoughtworks.iamcoach.pos.service.StorageService;
+import com.thoughtworks.iamcoach.pos.util.FileUtil;
 import com.thoughtworks.iamcoach.pos.vo.BoughtItem;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class App {
+    private static final String CART_FILE = "src/main/resources/cart.txt";
+
     public static void main(String[] args) {
 
-        StorageService storageService = new StorageService();
-        List<String> cartBarcodes = storageService.getCartBarcodes();
+        List<String> cartBarcodes = FileUtil.textToList(CART_FILE);;
 
         Pos pos = new Pos();
         List<BoughtItem> boughtItems = pos.barcodesToBoughtItems(cartBarcodes);

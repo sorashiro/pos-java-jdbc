@@ -9,8 +9,4 @@ import static org.fest.assertions.api.Assertions.assertThat;
 public class StorageServiceTest {
     StorageService storageService = new StorageService();
 
-    @Test
-    public void get_cart_barcodes_test() {
-        assertThat(storageService.getCartBarcodes().size()).isEqualTo(9);
-    }
 }
