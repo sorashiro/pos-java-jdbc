@@ -55,7 +55,6 @@ public class Pos {
         for (BoughtItem boughtItem : boughtItems) {
             System.out.print(boughtItem.getSubtotal() + "++++++");
         }
-        System.out.print("\n");
         return boughtItems.get(0);
     }
 
