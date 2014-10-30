@@ -6,7 +6,7 @@ import org.junit.Test;
 import static org.fest.assertions.api.Assertions.assertThat;
 
 public class ItemServiceTest {
-  ItemService itemService = new ItemService();
+    ItemService itemService = new ItemService();
 
     @Test
     public void find_item_by_id_test() {

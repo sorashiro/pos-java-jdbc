@@ -11,6 +11,7 @@ import java.util.List;
 
 public class BoughtItemService {
     private Barcode barcode = new Barcode();
+
     public List<BoughtItem> barcodesToBoughtItems(List<String> cartBarcodes) {
         ItemService itemService = new ItemService();
         List<BoughtItem> boughtItemList = new ArrayList<BoughtItem>();
