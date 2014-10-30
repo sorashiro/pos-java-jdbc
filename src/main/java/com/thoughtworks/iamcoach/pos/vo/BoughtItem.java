@@ -1,6 +1,6 @@
 package com.thoughtworks.iamcoach.pos.vo;
 
-public class BoughtItem implements Comparable{
+public class BoughtItem implements Comparable {
     private int id;
     private String barcode;
     private String name;
@@ -73,7 +73,7 @@ public class BoughtItem implements Comparable{
 
     @Override
     public int compareTo(Object o) {
-        double result =  this.subtotal - ((BoughtItem) o).getSubtotal();
-        return (int)result;
+        double result = this.subtotal - ((BoughtItem) o).getSubtotal();
+        return (int) result;
     }
 }

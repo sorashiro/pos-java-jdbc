@@ -39,7 +39,7 @@ public class Pos {
     private BoughtItem determinePromotionType(Item item, double number) {
         List<Promotion> promotionList = item.getPromotionList();
         List<BoughtItem> boughtItems = new ArrayList<BoughtItem>();
-        for(Promotion promotion : promotionList) {
+        for (Promotion promotion : promotionList) {
             double subtotal = promotion.calculate(item, number);
             BoughtItem boughtItem = new BoughtItem(item, number, promotion, subtotal);
             boughtItems.add(boughtItem);
@@ -50,7 +50,7 @@ public class Pos {
 
     private BoughtItem findMinSubtotal(List<BoughtItem> boughtItems) {
         for (BoughtItem boughtItem : boughtItems) {
-           System.out.print(boughtItem.getSubtotal() + "---------");
+            System.out.print(boughtItem.getSubtotal() + "---------");
         }
         System.out.print("\n");
         Collections.sort(boughtItems);

@@ -6,7 +6,9 @@ public class Promotion {
     private int discount;
     private int level;
 
-    public Promotion() {}
+    public Promotion() {
+    }
+
     public Promotion(int id, String type, int level) {
         this.id = id;
         this.type = type;
