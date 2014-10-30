@@ -21,7 +21,7 @@ public class Barcode {
         return number * times;
     }
 
-    public List<String> uniqueArray(List<String> cartBarcodes) {
+    public List<String> uniqueBarcode(List<String> cartBarcodes) {
         List<String> tempArray = new ArrayList<String>();
 
         for (String barcode : cartBarcodes) {

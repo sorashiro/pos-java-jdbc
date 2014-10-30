@@ -14,7 +14,7 @@ public class BoughtItemService {
     public List<BoughtItem> barcodesToBoughtItems(List<String> cartBarcodes) {
         ItemService itemService = new ItemService();
         List<BoughtItem> boughtItemList = new ArrayList<BoughtItem>();
-        List<String> uniqueBarcodes = barcode.uniqueArray(cartBarcodes);
+        List<String> uniqueBarcodes = barcode.uniqueBarcode(cartBarcodes);
 
         for (String uniqueBarcode : uniqueBarcodes) {
             int times = barcode.getBarcodeTimes(cartBarcodes, uniqueBarcode);
