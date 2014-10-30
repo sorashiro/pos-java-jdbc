@@ -12,27 +12,32 @@ import java.util.List;
 public class Pos {
 
     public List<BoughtItem> barcodesToBoughtItems(List<String> cartBarcodes) {
+        ItemService itemService = new ItemService();
         List<BoughtItem> boughtItemList = new ArrayList<BoughtItem>();
         List<String> uniqueBarcodes = uniqueArray(cartBarcodes);
 
         for (String uniqueBarcode : uniqueBarcodes) {
             int times = getBarcodeTimes(cartBarcodes, uniqueBarcode);
-            BoughtItem boughtItem = toBoughtItem(uniqueBarcode, times);
+            String itemBarcode = getItemBarcode(uniqueBarcode);
+            BoughtItem boughtItem = determinePromotionType(itemService.findItemByBarcode(itemBarcode),
+                    getBarcodeNumber(uniqueBarcode, times));
             boughtItemList.add(boughtItem);
         }
         return boughtItemList;
     }
-
-    private BoughtItem toBoughtItem(String cartBarcode, int times) {
-        ItemService itemService = new ItemService();
+    private String getItemBarcode(String cartBarcode) {
         String[] barcodes = cartBarcode.split("-");
+        return barcodes[0];
+    }
 
+    private double getBarcodeNumber(String cartBarcode, int times) {
+        String[] barcodes = cartBarcode.split("-");
         Double number = 1.00;
         if (barcodes.length == 2) {
             number = Double.parseDouble(barcodes[1]);
         }
-
-        return determinePromotionType(itemService.findItemByBarcode(barcodes[0]), number * times);
+        
+        return number * times;
     }
 
     private BoughtItem determinePromotionType(Item item, double number) {
