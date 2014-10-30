@@ -1,9 +1,7 @@
 package com.thoughtworks.iamcoach.pos.dao;
 
-import com.thoughtworks.iamcoach.pos.PromotionFactory;
 import com.thoughtworks.iamcoach.pos.util.DatabaseUtil;
 import com.thoughtworks.iamcoach.pos.vo.Item;
-import com.thoughtworks.iamcoach.pos.vo.Promotion;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -11,12 +9,12 @@ import java.util.List;
 
 public class ItemDao {
     private Connection connection = null;
-    private Statement statement = null;
-    private ResultSet resultSet = null;
 
     public List<Item> getItems() {
         List<Item> itemList = new ArrayList<Item>();
         String sql = "SELECT * FROM item";
+        Statement statement = null;
+        ResultSet resultSet = null;
 
         try {
             connection = DatabaseUtil.getConnection();
