@@ -4,7 +4,7 @@ package com.thoughtworks.iamcoach.pos;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Pos {
+public class Barcode {
 
     public String getItemBarcode(String cartBarcode) {
         String[] barcodes = cartBarcode.split("-");
