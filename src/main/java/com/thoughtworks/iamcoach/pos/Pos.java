@@ -47,14 +47,7 @@ public class Pos {
     }
 
     private BoughtItem findMinSubtotal(List<BoughtItem> boughtItems) {
-        for (BoughtItem boughtItem : boughtItems) {
-            System.out.print(boughtItem.getSubtotal() + "---------");
-        }
-        System.out.print("\n");
         Collections.sort(boughtItems);
-        for (BoughtItem boughtItem : boughtItems) {
-            System.out.print(boughtItem.getSubtotal() + "++++++");
-        }
         return boughtItems.get(0);
     }
 
