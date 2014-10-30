@@ -32,7 +32,6 @@ public class Promotion {
 
     public double calculate(Item item, double number) {
 
-        double subtotal = item.getPrice() * number;
-        return subtotal;
+        return item.getPrice() * number;
     }
 }
