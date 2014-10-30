@@ -15,7 +15,6 @@ public class SecondHalfPricePromotion extends Promotion {
         double total = item.getPrice() * number;
         double discountTotal = (0.5 * item.getPrice()) * (int) (number / 2);
 
-        double subtotal = total - discountTotal;
-        return subtotal;
+        return total - discountTotal;
     }
 }
