@@ -23,7 +23,7 @@ public class BoughtItemService {
 
             String itemBarcode = barcode.getItemBarcode(uniqueBarcode);
             Item item = itemService.findItemByBarcode(itemBarcode);
-            
+
             BoughtItem boughtItem = determineBoughtItem(item, number);
             boughtItemList.add(boughtItem);
         }

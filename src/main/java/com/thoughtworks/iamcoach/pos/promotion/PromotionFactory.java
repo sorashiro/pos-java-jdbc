@@ -1,4 +1,4 @@
-package com.thoughtworks.iamcoach.pos;
+package com.thoughtworks.iamcoach.pos.promotion;
 
 import com.thoughtworks.iamcoach.pos.vo.Promotion;
 
