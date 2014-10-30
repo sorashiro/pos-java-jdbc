@@ -19,9 +19,12 @@ public class BoughtItemService {
 
         for (String uniqueBarcode : uniqueBarcodes) {
             int times = barcode.getBarcodeTimes(cartBarcodes, uniqueBarcode);
+            double number = barcode.getBarcodeNumber(uniqueBarcode, times);
+
             String itemBarcode = barcode.getItemBarcode(uniqueBarcode);
-            BoughtItem boughtItem = determineBoughtItem(itemService.findItemByBarcode(itemBarcode),
-                    barcode.getBarcodeNumber(uniqueBarcode, times));
+            Item item = itemService.findItemByBarcode(itemBarcode);
+            
+            BoughtItem boughtItem = determineBoughtItem(item, number);
             boughtItemList.add(boughtItem);
         }
         return boughtItemList;
@@ -30,6 +33,7 @@ public class BoughtItemService {
     private BoughtItem determineBoughtItem(Item item, double number) {
         List<Promotion> promotionList = item.getPromotionList();
         List<BoughtItem> boughtItems = new ArrayList<BoughtItem>();
+
         for (Promotion promotion : promotionList) {
             double subtotal = promotion.calculate(item, number);
             BoughtItem boughtItem = new BoughtItem(item, number, promotion, subtotal);
