@@ -39,4 +39,10 @@ public class BarcodeTest {
         assertThat(barcode.getBarcodeNumber("ITEM000002-3", 1)).isEqualTo(3.0);
     }
 
+    @Test
+    public void get_item_barcode_test() {
+        assertThat(barcode.getItemBarcode("ITEM000002")).isEqualTo("ITEM000002");
+        assertThat(barcode.getItemBarcode("ITEM000002-1")).isEqualTo("ITEM000002");
+    }
+
 }
