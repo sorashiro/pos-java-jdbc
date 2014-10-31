@@ -10,32 +10,6 @@ import java.util.List;
 public class ItemDao {
     private Connection connection = null;
 
-    public List<Item> getItems() {
-        List<Item> itemList = new ArrayList<Item>();
-        String sql = "SELECT * FROM item";
-        Statement statement = null;
-        ResultSet resultSet = null;
-
-        try {
-            connection = DatabaseUtil.getConnection();
-            statement = connection.createStatement();
-            resultSet = statement.executeQuery(sql);
-            while (resultSet.next()) {
-                Item item = new Item(resultSet.getInt("id"), resultSet.getString("barcode"),
-                        resultSet.getString("name"), resultSet.getString("unit"),
-                        resultSet.getDouble("price"), resultSet.getString("category"));
-                itemList.add(item);
-            }
-            resultSet.close();
-            statement.close();
-            DatabaseUtil.closeConnection();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        return itemList;
-    }
-
     public Item getItemById(int id) {
         Item item = null;
         String sql = "SELECT * FROM item WHERE id=?";
