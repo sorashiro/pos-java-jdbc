@@ -30,10 +30,6 @@ public class Promotion {
         return level;
     }
 
-    public String getType() {
-        return type;
-    }
-
     public double calculate(Item item, double number) {
 
         return item.getPrice() * number;
