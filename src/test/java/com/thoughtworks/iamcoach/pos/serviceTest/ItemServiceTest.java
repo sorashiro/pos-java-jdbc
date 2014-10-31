@@ -17,7 +17,7 @@ public class ItemServiceTest {
     @Test
     public void get_promotions_by_item_id_test() {
         int id = 1;
-        assertThat(itemService.findItemById(id).getPromotionList().size()).isEqualTo(2);
+        assertThat(itemService.findItemById(id).getPromotionList()).hasSize(2);
     }
 
     @Test
