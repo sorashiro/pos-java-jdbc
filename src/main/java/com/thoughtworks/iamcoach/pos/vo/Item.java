@@ -14,23 +14,6 @@ public class Item {
     public Item() {
     }
 
-    private Item(String barcode, String name, String unit, double price) {
-        this.barcode = barcode;
-        this.name = name;
-        this.unit = unit;
-        this.price = price;
-    }
-
-    public Item(int id, String barcode, String name, String unit, double price, String category, List<Promotion> promotionList) {
-        this.id = id;
-        this.barcode = barcode;
-        this.name = name;
-        this.unit = unit;
-        this.price = price;
-        this.category = category;
-        this.promotionList = promotionList;
-    }
-
     public Item(int id, String barcode, String name, String unit, double price, String category) {
         this.id = id;
         this.barcode = barcode;
