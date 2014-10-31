@@ -29,7 +29,7 @@ public class PromotionDao {
 
             while (resultSet.next()) {
                 Promotion promotion = PromotionFactory.createPromotion(resultSet.getInt("id"),
-                        resultSet.getString("type"),resultSet.getInt("discount"), resultSet.getInt("level"));
+                        resultSet.getString("type"), resultSet.getInt("discount"), resultSet.getInt("level"));
                 promotionList.add(promotion);
             }
 
