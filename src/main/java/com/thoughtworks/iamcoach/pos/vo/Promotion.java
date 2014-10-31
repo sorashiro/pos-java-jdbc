@@ -31,7 +31,6 @@ public class Promotion {
     }
 
     public double calculate(Item item, double number) {
-
         return item.getPrice() * number;
     }
 }
