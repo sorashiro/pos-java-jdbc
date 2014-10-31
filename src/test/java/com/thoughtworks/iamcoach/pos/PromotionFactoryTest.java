@@ -1,6 +1,6 @@
 package com.thoughtworks.iamcoach.pos;
 
-public class PromotionTypeTest {
+public class PromotionFactoryTest {
     PromotionFactory promotionFactory = new PromotionFactory();
 
 }
