@@ -1,6 +1,6 @@
 package com.thoughtworks.iamcoach.pos;
 
-import com.thoughtworks.iamcoach.pos.promotion.DiscountPromotion;
+import com.thoughtworks.iamcoach.pos.vo.promotion.DiscountPromotion;
 import com.thoughtworks.iamcoach.pos.vo.Item;
 import org.junit.Test;
 
