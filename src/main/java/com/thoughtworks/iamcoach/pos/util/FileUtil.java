@@ -4,13 +4,14 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
 public class FileUtil {
     public static List<String> textToList(String path) {
         Path file = Paths.get(path);
+        List<String> linesRead = new ArrayList<String>();
 
-        List<String> linesRead = null;
         try {
             linesRead = Files.readAllLines(file);
         } catch (IOException e) {
