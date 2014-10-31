@@ -18,7 +18,6 @@ public class ItemService {
     public Item findItemByBarcode(String barcode) {
         Item item = itemDao.getItemByBarcode(barcode);
         item.setPromotionList(promotionDao.getItemPromotionList(item.getId()));
-
         return item;
     }
 
