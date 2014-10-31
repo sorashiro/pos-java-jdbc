@@ -1,8 +1,5 @@
 package com.thoughtworks.iamcoach.pos.vo;
 
-import com.thoughtworks.iamcoach.pos.vo.BoughtItem;
-import com.thoughtworks.iamcoach.pos.vo.Promotion;
-
 public class PrintItem {
     private String name;
     private String unit;
