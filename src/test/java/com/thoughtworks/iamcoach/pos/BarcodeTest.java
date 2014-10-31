@@ -29,6 +29,7 @@ public class BarcodeTest {
         barcodeList.add("ITEM000001");
         barcodeList.add("ITEM000002");
         barcodeList.add("ITEM000002");
+
         assertThat(barcode.getBarcodeTimes(barcodeList, "ITEM000002")).isEqualTo(2);
         assertThat(barcode.getBarcodeTimes(barcodeList, "ITEM000001")).isEqualTo(1);
     }
