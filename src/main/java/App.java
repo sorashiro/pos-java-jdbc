@@ -16,10 +16,12 @@ public class App {
         List<BoughtItem> boughtItems = boughtItemService.barcodesToBoughtItems(cartBarcodes);
 
         List<PrintItem> printItemList = new ArrayList<PrintItem>();
+
         for(BoughtItem boughtItem : boughtItems) {
             PrintItem printItem = new PrintItem(boughtItem);
             printItemList.add(printItem);
         }
+
         Output.printShoppingList(printItemList);
     }
 

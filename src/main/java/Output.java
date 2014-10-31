@@ -22,6 +22,7 @@ public class Output {
 
     private static Double getTotal(List<PrintItem> printItemList) {
         Double total = 0.00;
+
         for (PrintItem printItem : printItemList) {
             total += printItem.getSubtotal();
         }
@@ -31,6 +32,7 @@ public class Output {
 
     private static Double getSum(List<PrintItem> printItemList) {
         Double sum = 0.00;
+
         for (PrintItem printItem : printItemList) {
             sum += printItem.getPrice() * printItem.getNumber();
         }

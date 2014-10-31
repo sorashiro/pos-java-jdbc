@@ -42,7 +42,7 @@ public class Barcode {
                 result++;
             }
         }
-        
+
         return result;
     }
 }
