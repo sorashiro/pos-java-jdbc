@@ -11,15 +11,18 @@ public class ItemDao {
     public Item getItemById(int id) {
         Item item = null;
         String sql = "SELECT * FROM item WHERE id=?";
+
         try {
             connection = DatabaseUtil.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, id);
+
             ResultSet resultSet = preparedStatement.executeQuery();
             resultSet.next();
             item = new Item(resultSet.getInt("id"), resultSet.getString("barcode"),
                     resultSet.getString("name"), resultSet.getString("unit"),
                     resultSet.getDouble("price"), resultSet.getString("category"));
+
             preparedStatement.close();
             resultSet.close();
             DatabaseUtil.closeConnection();
@@ -32,10 +35,12 @@ public class ItemDao {
     public Item getItemByBarcode(String barcode) {
         Item item = null;
         String sql = "SELECT * FROM item WHERE barcode=?";
+
         try {
             connection = DatabaseUtil.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, barcode);
+
             ResultSet resultSet = preparedStatement.executeQuery();
             resultSet.next();
             item = new Item(resultSet.getInt("id"), resultSet.getString("barcode"),
