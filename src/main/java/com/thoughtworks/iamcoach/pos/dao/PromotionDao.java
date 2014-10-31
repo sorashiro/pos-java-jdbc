@@ -1,6 +1,6 @@
 package com.thoughtworks.iamcoach.pos.dao;
 
-import com.thoughtworks.iamcoach.pos.promotion.PromotionFactory;
+import com.thoughtworks.iamcoach.pos.PromotionFactory;
 import com.thoughtworks.iamcoach.pos.util.DatabaseUtil;
 import com.thoughtworks.iamcoach.pos.vo.Promotion;
 

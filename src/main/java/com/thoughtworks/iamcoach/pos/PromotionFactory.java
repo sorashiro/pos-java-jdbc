@@ -1,5 +1,8 @@
-package com.thoughtworks.iamcoach.pos.promotion;
+package com.thoughtworks.iamcoach.pos;
 
+import com.thoughtworks.iamcoach.pos.promotion.BuyTwoGetOneFreePromotion;
+import com.thoughtworks.iamcoach.pos.promotion.DiscountPromotion;
+import com.thoughtworks.iamcoach.pos.promotion.SecondHalfPricePromotion;
 import com.thoughtworks.iamcoach.pos.vo.Promotion;
 
 
