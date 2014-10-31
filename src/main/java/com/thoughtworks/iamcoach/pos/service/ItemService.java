@@ -4,8 +4,6 @@ import com.thoughtworks.iamcoach.pos.dao.ItemDao;
 import com.thoughtworks.iamcoach.pos.dao.PromotionDao;
 import com.thoughtworks.iamcoach.pos.vo.Item;
 
-import java.util.List;
-
 public class ItemService {
 
     ItemDao itemDao = new ItemDao();

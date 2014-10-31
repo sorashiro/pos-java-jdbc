@@ -62,9 +62,11 @@ public class BoughtItem implements Comparable {
     @Override
     public int compareTo(Object o) {
         double result = this.subtotal - ((BoughtItem) o).getSubtotal();
+
         if(result == 0) {
             result = this.promotion.getLevel() - ((BoughtItem) o).getPromotion().getLevel();
         }
+
         return (int)result;
     }
 
