@@ -14,6 +14,7 @@ public class Barcode {
     public double getBarcodeNumber(String cartBarcode, int times) {
         String[] barcodes = cartBarcode.split("-");
         Double number = 1.00;
+
         if (barcodes.length == 2) {
             number = Double.parseDouble(barcodes[1]);
         }
@@ -29,6 +30,7 @@ public class Barcode {
                 tempArray.add(barcode);
             }
         }
+
         return tempArray;
     }
 
@@ -40,6 +42,7 @@ public class Barcode {
                 result++;
             }
         }
+        
         return result;
     }
 }
