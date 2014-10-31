@@ -1,4 +1,4 @@
-package com.thoughtworks.iamcoach.pos.vo;
+package com.thoughtworks.iamcoach.pos.domain;
 
 import org.junit.Test;
 

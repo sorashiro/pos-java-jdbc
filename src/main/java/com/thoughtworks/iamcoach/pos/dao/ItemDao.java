@@ -1,11 +1,9 @@
 package com.thoughtworks.iamcoach.pos.dao;
 
 import com.thoughtworks.iamcoach.pos.util.DatabaseUtil;
-import com.thoughtworks.iamcoach.pos.vo.Item;
+import com.thoughtworks.iamcoach.pos.domain.Item;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class ItemDao {
     private Connection connection = null;

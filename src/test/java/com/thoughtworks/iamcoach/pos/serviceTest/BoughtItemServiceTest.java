@@ -1,7 +1,7 @@
 package com.thoughtworks.iamcoach.pos.serviceTest;
 
 import com.thoughtworks.iamcoach.pos.service.BoughtItemService;
-import com.thoughtworks.iamcoach.pos.vo.BoughtItem;
+import com.thoughtworks.iamcoach.pos.domain.BoughtItem;
 import org.junit.Test;
 
 import java.util.ArrayList;

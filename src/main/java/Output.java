@@ -1,4 +1,4 @@
-import com.thoughtworks.iamcoach.pos.vo.PrintItem;
+import com.thoughtworks.iamcoach.pos.domain.PrintItem;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

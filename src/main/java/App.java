@@ -1,7 +1,7 @@
 import com.thoughtworks.iamcoach.pos.service.BoughtItemService;
 import com.thoughtworks.iamcoach.pos.util.FileUtil;
-import com.thoughtworks.iamcoach.pos.vo.BoughtItem;
-import com.thoughtworks.iamcoach.pos.vo.PrintItem;
+import com.thoughtworks.iamcoach.pos.domain.BoughtItem;
+import com.thoughtworks.iamcoach.pos.domain.PrintItem;
 
 import java.util.ArrayList;
 import java.util.List;

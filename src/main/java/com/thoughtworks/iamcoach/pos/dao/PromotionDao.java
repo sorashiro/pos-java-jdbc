@@ -2,7 +2,7 @@ package com.thoughtworks.iamcoach.pos.dao;
 
 import com.thoughtworks.iamcoach.pos.PromotionFactory;
 import com.thoughtworks.iamcoach.pos.util.DatabaseUtil;
-import com.thoughtworks.iamcoach.pos.vo.Promotion;
+import com.thoughtworks.iamcoach.pos.domain.Promotion;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

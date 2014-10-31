@@ -1,7 +1,7 @@
-package com.thoughtworks.iamcoach.pos.vo.promotion;
+package com.thoughtworks.iamcoach.pos.domain.promotion;
 
-import com.thoughtworks.iamcoach.pos.vo.Item;
-import com.thoughtworks.iamcoach.pos.vo.Promotion;
+import com.thoughtworks.iamcoach.pos.domain.Item;
+import com.thoughtworks.iamcoach.pos.domain.Promotion;
 
 public class SecondHalfPricePromotion extends Promotion {
 

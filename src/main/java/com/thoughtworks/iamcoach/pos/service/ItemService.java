@@ -2,7 +2,7 @@ package com.thoughtworks.iamcoach.pos.service;
 
 import com.thoughtworks.iamcoach.pos.dao.ItemDao;
 import com.thoughtworks.iamcoach.pos.dao.PromotionDao;
-import com.thoughtworks.iamcoach.pos.vo.Item;
+import com.thoughtworks.iamcoach.pos.domain.Item;
 
 public class ItemService {
 

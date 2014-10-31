@@ -1,8 +1,8 @@
 package com.thoughtworks.iamcoach.pos;
 
-import com.thoughtworks.iamcoach.pos.vo.promotion.BuyTwoGetOneFreePromotion;
-import com.thoughtworks.iamcoach.pos.vo.promotion.DiscountPromotion;
-import com.thoughtworks.iamcoach.pos.vo.promotion.SecondHalfPricePromotion;
+import com.thoughtworks.iamcoach.pos.domain.promotion.BuyTwoGetOneFreePromotion;
+import com.thoughtworks.iamcoach.pos.domain.promotion.DiscountPromotion;
+import com.thoughtworks.iamcoach.pos.domain.promotion.SecondHalfPricePromotion;
 import org.junit.Test;
 
 import static org.fest.assertions.api.Assertions.assertThat;

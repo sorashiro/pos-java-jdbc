@@ -1,9 +1,9 @@
 package com.thoughtworks.iamcoach.pos.service;
 
 import com.thoughtworks.iamcoach.pos.Barcode;
-import com.thoughtworks.iamcoach.pos.vo.BoughtItem;
-import com.thoughtworks.iamcoach.pos.vo.Item;
-import com.thoughtworks.iamcoach.pos.vo.Promotion;
+import com.thoughtworks.iamcoach.pos.domain.BoughtItem;
+import com.thoughtworks.iamcoach.pos.domain.Item;
+import com.thoughtworks.iamcoach.pos.domain.Promotion;
 
 import java.util.ArrayList;
 import java.util.Collections;
