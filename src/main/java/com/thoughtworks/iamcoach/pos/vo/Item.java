@@ -14,7 +14,7 @@ public class Item {
     public Item() {
     }
 
-    public Item(String barcode, String name, String unit, double price) {
+    private Item(String barcode, String name, String unit, double price) {
         this.barcode = barcode;
         this.name = name;
         this.unit = unit;

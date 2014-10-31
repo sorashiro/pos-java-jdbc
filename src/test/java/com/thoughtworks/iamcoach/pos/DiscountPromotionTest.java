@@ -11,7 +11,7 @@ public class DiscountPromotionTest {
 
     @Test
     public void calculate_test() {
-        Item item = new Item("ITEM000002", "apple", "kg", 10.00);
+        Item item = new Item(1, "ITEM000002", "apple", "kg", 10.00, "fruit");
 
         assertThat(discountPromotion.calculate(item, 5.0)).isEqualTo(25.0);
     }
